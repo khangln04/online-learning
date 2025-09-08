@@ -1,0 +1,115 @@
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px; /* khoảng cách giữa các card */
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px 0;
+  row-gap: 20px;
+}
+
+/* Card từng khóa học */
+.mycourselist-card {
+  background-color: #fffef7;
+  border: 1px solid #e0e0e0;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 13px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-height: 200px;
+  max-width: 220px;
+}
+
+.mycourselist-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+}
+
+/* Tiêu đề */
+.course-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  text-align: center;
+  color: #444;
+}
+
+.paid-title {
+  color: #007bff;
+}
+.paid-title a {
+  color: #007bff;
+  text-decoration: none;
+}
+.paid-title a:hover {
+  text-decoration: underline;
+}
+.unpaid-title {
+  color: #999;
+}
+
+/* Nội dung card */
+.mycourselist-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+.course-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.course-row span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.course-row .label {
+  font-weight: 500;
+  color: #000;
+}
+
+.paid, .unpaid {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: #333;
+}
+
+.paid svg {
+  color: green;
+}
+.unpaid svg {
+  color: red;
+}
+
+/* Nút Học ngay */
+.start-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #fbc02d;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+.start-btn:hover {
+  background-color: #e0a800;
+}

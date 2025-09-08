@@ -1,0 +1,167 @@
+.bloglist-container {
+  padding: 40px 15px;
+  background: #e3f2fd !important; /* Phông nền xanh dương nhạt, ưu tiên cao */
+  font-family: "Segoe UI", sans-serif;
+  /* Loại bỏ min-height: 100vh, thay bằng padding và margin tự động */
+  padding-bottom: 20px; /* Thêm padding dưới để tránh nội dung bị cắt */
+  color: #1e3a8a;
+  position: relative;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #4b6980;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb:hover {
+  color: #1976d2;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cột bằng nhau */
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto 20px;
+  max-width: 1400px; /* Giới hạn chiều rộng tối đa */
+  padding: 0 20px;
+}
+
+.blog-grid.second-row {
+  margin-top: 10px;
+}
+
+.blog-card {
+  width: 100%; /* Sử dụng toàn bộ không gian trong grid */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #90a4ae;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-content h3 {
+  font-size: 18px;
+  color: #1976d2;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.blog-content h3:hover {
+  text-decoration: underline;
+  color: #1565c0;
+}
+
+.blog-content p {
+  font-size: 14px;
+  color: #4b6980;
+  height: 48px;
+  overflow: hidden;
+  margin-bottom: auto;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.blog-footer a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.blog-footer a:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pagination button {
+  background: #1976d2;
+  border: none;
+  padding: 6px 12px;
+  margin: 0 3px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #1565c0;
+  transform: translateY(-1px);
+}
+
+.pagination button:disabled {
+  background: #b0bec5;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background: #1565c0;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .bloglist-container {
+    padding: 20px 10px;
+  }
+
+  .blog-card {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .blog-grid {
+    gap: 10px;
+  }
+}

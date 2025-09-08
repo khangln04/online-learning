@@ -1,0 +1,189 @@
+.header-manager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background-color: #6366f1;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Đảm bảo header luôn ở trên cùng */
+  min-height: 60px; /* Chiều cao cố định */
+}
+
+.header-manager-burger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: background-color 0.2s;
+}
+
+.header-manager-burger-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.header-manager-burger-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.header-manager-drawer {
+  position: fixed;
+  top: 80px; /* Bắt đầu ngay bên dưới header */
+  left: 0;
+  width: 250px;
+  max-height: calc(80vh - 60px); /* Điều chỉnh chiều cao để trừ đi phần header */
+  background-color: #4b5563;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1001; /* Ở trên nội dung nhưng dưới header */
+  overflow-y: auto;
+  border-radius: 0 8px 8px 0;
+  height: 150%;
+}
+
+.header-manager-drawer.header-manager-open {
+  transform: translateX(0); /* Trượt vào từ trái */
+}
+
+.header-manager-drawer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #374151;
+}
+
+.header-manager-drawer-logo {
+  width: 48px;
+  height: 48px;
+}
+
+.header-manager-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s;
+}
+
+.header-manager-close-btn:hover {
+  color: #d1d5db;
+}
+
+.header-manager-drawer-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.header-manager-drawer-menu a {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background-color 0.2s;
+}
+
+.header-manager-drawer-menu a:hover {
+  background-color: #6b7280;
+}
+
+.header-manager-drawer-menu img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.header-manager-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-manager-logo img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.2s;
+}
+
+.header-manager-logo img:hover {
+  transform: scale(1.1);
+}
+
+.header-manager-navbar11 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-manager-navbar11 a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.header-manager-navbar11 a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e0e7ff;
+}
+
+.header-manager-auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-manager-auth-buttons span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header-manager-auth-buttons button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.header-manager-auth-buttons button:hover {
+  background-color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .header-manager {
+    padding: 12px 16px;
+  }
+
+  .header-manager-navbar11 {
+    display: none;
+  }
+
+  .header-manager-auth-buttons {
+    gap: 8px;
+  }
+
+  .header-manager-auth-buttons span {
+    font-size: 13px;
+  }
+
+  .header-manager-auth-buttons button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

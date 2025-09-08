@@ -1,0 +1,6 @@
+@ActiveLearningSystem_HostAddress = https://localhost:5000
+
+GET {{ActiveLearningSystem_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

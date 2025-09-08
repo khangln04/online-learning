@@ -1,0 +1,154 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+.login-left {
+  flex: 1;
+  background: linear-gradient(to bottom right, #5a2bc9, #85278d);
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+.login-logo {
+  width: 180px;
+  height: 180px;
+}
+
+.login-right {
+  flex: 1.5; /* tăng tỷ lệ so với bên trái */
+  font-size: 20px;
+  padding: 80px -60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+
+.login-title {
+  font-size: 32px;
+  margin-left: 30%;
+  margin-bottom: 12px;
+}
+
+.highlight {
+  color: #f6aa00;
+  border-left: 4px solid #f6aa00;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.login-subtext {
+  margin-bottom: 30px;
+  margin-left: 30%;
+  font-size: 20px;
+}
+
+.create-link {
+  color: #1d4ed8;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-input {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  margin-left: 30%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  width: 48%;
+  max-width: 520px; /* Giới hạn chiều rộng */
+  outline: none;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.remember-label {
+  display: flex;
+  margin-left: 30%;
+  align-items: center;
+  gap: 8px;
+}
+
+.forgot-password {
+  color: #85278d;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 20%;
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: #f6aa00;
+  border: none;
+  color: #000;
+  padding: 12px 20px;
+  margin-left: 30%;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 24px;
+  width: 50%;
+}
+
+.login-button:hover {
+  opacity: 0.9;
+}
+
+.social-title {
+  font-weight: bold;
+  margin-left: 30%;
+  margin-bottom: 12px;
+}
+
+.social-button {
+  background-color: #e74c3c;
+  color: white;
+  margin-left: 30%;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  justify-content: center;
+  width: 50%;
+}
+
+.social-icon {
+  font-weight: bold;
+  font-size: 18px;
+}
+.error-wrapperlogin {
+   width: 50%;
+  max-width: 440px;
+  margin-left: 30%;
+  padding: 12px 12px;
+  margin-bottom: 20px;
+  background-color: #fff1f0; /* Nền đỏ nhạt */
+  border: 1px solid #ff4d4f; /* Viền đỏ cảnh báo */
+  border-radius: 4px;
+  text-align: center;
+}
+.error-messagelogin {
+  color: #ff4d4f; /* Màu đỏ cảnh báo */
+  font-size: 14px; /* Đồng bộ với login-input */
+  font-weight: 500;
+  margin: 0;
+}

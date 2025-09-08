@@ -1,0 +1,68 @@
+.payment-result-container {
+  padding: 40px 20px;
+  background-color: #f4f6f8;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-result-box {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.payment-result-box h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.payment-result-box p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.payment-result-box .btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.payment-result-box .submit-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 22px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.payment-result-box .submit-btn:hover {
+  background-color: #2980b9;
+}
+
+.payment-result-box .retry-btn {
+  background-color: #e67e22;
+}
+
+.payment-result-box .retry-btn:hover {
+  background-color: #d35400;
+}
+
+.success-style {
+  border-left: 5px solid #2ecc71;
+}
+
+.error-style {
+  border-left: 5px solid #e74c3c;
+}

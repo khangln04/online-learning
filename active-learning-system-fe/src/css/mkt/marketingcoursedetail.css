@@ -1,0 +1,531 @@
+
+/* --- MARKETER LEARNING INTERFACE SIDEBAR + MAIN --- */
+.market-detail-interface {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f6fa;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.market-detail-sidebar {
+  width: 340px;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 12px 0 rgba(30,41,59,0.04);
+}
+.market-detail-sidebar-header {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+.market-detail-back-button-container {
+  margin-bottom: 1rem;
+}
+.market-detail-back-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.2s;
+}
+.market-detail-back-button:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+}
+.market-detail-sidebar-header h3 {
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+.market-detail-modules-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 0.5rem 1rem 1.5rem;
+}
+.market-detail-module-item {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background: #f8fafc;
+  box-shadow: 0 1px 4px 0 rgba(30,41,59,0.04);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.market-detail-module-item.active {
+  border: 2px solid #3b82f6;
+  background: #e0f2fe;
+}
+.market-detail-module-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.market-detail-module-header.expanded {
+  background: #e0f2fe;
+}
+.market-detail-module-header.active {
+  background: #dbeafe;
+  border-left: 4px solid #3b82f6;
+}
+.market-detail-module-toggle {
+  font-size: 1.1rem;
+  color: #3b82f6;
+  width: 18px;
+  text-align: center;
+}
+.market-detail-module-number {
+  background: #3b82f6;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.market-detail-module-details h4 {
+  margin: 0;
+  color: #222;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.market-detail-module-content {
+  background: #f8fafc;
+  padding: 1rem 1rem 0.5rem 1.5rem;
+}
+.market-detail-select-module-btn {
+  width: 100%;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+  padding: 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+}
+.market-detail-select-module-btn:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+.market-detail-lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 0.7rem;
+  border: 2px solid transparent;
+  background: #fff;
+  transition: all 0.2s;
+  position: relative;
+}
+.market-detail-lesson-item.active {
+  background: linear-gradient(135deg, #1e2a37 0%, #2d3748 100%);
+  color: #fff;
+  border-color: #1e2a37;
+}
+.market-detail-lesson-icon {
+  font-size: 1.1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6b7280 0%, #374151 100%);
+  color: #fff;
+  font-weight: 600;
+}
+.market-detail-lesson-item.active .market-detail-lesson-icon {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+.market-detail-lesson-info h5 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+.market-detail-lesson-item.active .market-detail-lesson-info h5 {
+  color: #fff;
+}
+.market-detail-lesson-duration {
+  color: #6b7280;
+  font-size: 0.8rem;
+  margin-top: 0.1rem;
+  display: block;
+  font-weight: 500;
+}
+.market-detail-lesson-item.active .market-detail-lesson-duration {
+  color: #fff;
+}
+.market-detail-quiz-section {
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #e5e7eb;
+}
+.market-detail-quiz-item {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border: 2px solid #93c5fd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  margin-bottom: 0.7rem;
+  transition: all 0.2s;
+}
+.market-detail-quiz-item.active {
+  background: linear-gradient(135deg, #1e2a37 0%, #2d3748 100%);
+  color: #fff;
+  border-color: #1e2a37;
+}
+.market-detail-quiz-icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.market-detail-quiz-item.active .market-detail-quiz-icon {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+.market-detail-quiz-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.market-detail-quiz-subtitle {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Main content area */
+.market-detail-content-area {
+  flex: 1;
+  padding: 2.5rem 2.5rem 2.5rem 2rem;
+  background: #f5f6fa;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+.market-detail-module-overview-content {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(30,41,59,0.06);
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+}
+.market-detail-overview-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+.market-detail-overview-header p {
+  color: #555;
+  font-size: 1.08rem;
+  margin-bottom: 1.2rem;
+}
+.market-detail-module-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+.market-detail-stat-card {
+  background: #f0f9ff;
+  border-radius: 10px;
+  padding: 1.1rem 2.2rem;
+  text-align: center;
+  box-shadow: 0 1px 4px 0 rgba(30,41,59,0.04);
+}
+.market-detail-stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+.market-detail-stat-label {
+  color: #666;
+  font-size: 1rem;
+}
+.market-detail-learning-tip {
+  margin-top: 1.2rem;
+  color: #0ea5e9;
+  font-size: 1.08rem;
+  background: #e0f2fe;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  display: inline-block;
+}
+.market-detail-video-content {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(30,41,59,0.06);
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+}
+.market-detail-video-header h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+.market-detail-video-player-container {
+  margin-bottom: 1.2rem;
+}
+.market-detail-video-placeholder {
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  color: #888;
+}
+.market-detail-play-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.market-detail-lesson-description h3 {
+  margin: 0 0 0.3rem 0;
+  color: #3b82f6;
+  font-size: 1.1rem;
+}
+.market-detail-lesson-description p {
+  color: #333;
+  font-size: 1rem;
+}
+.market-detail-quiz-intro-content, .market-detail-quiz-taking-content {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(30,41,59,0.06);
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+}
+.market-detail-quiz-header h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+.market-detail-quiz-info-grid {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+.market-detail-quiz-info-card {
+  background: #f0f9ff;
+  border-radius: 10px;
+  padding: 1.1rem 2.2rem;
+  text-align: center;
+  box-shadow: 0 1px 4px 0 rgba(30,41,59,0.04);
+}
+.market-detail-info-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+.market-detail-quiz-completed {
+  margin-top: 1.2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  background: #fdecea;
+  border: 2px solid #e74c3c;
+  color: #e74c3c;
+  text-align: center;
+}
+.market-detail-quiz-completed h3 {
+  margin: 0 0 0.7rem 0;
+  font-size: 1.2rem;
+}
+.market-detail-result-summary {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}
+.market-detail-result-item {
+  font-size: 1.1rem;
+}
+.market-detail-result-item strong.pass {
+  color: #27ae60;
+}
+.market-detail-result-item strong.fail {
+  color: #e74c3c;
+}
+.market-detail-start-quiz-btn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+.market-detail-start-quiz-btn:hover {
+  background: #2563eb;
+}
+.market-detail-quiz-taking-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.market-detail-quiz-progress {
+  flex: 1;
+}
+.market-detail-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e7ef;
+  border-radius: 6px;
+  margin-top: 0.3rem;
+  overflow: hidden;
+}
+.market-detail-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 6px;
+  transition: width 0.3s;
+}
+.market-detail-quiz-timer {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  font-weight: 600;
+  margin-left: 2rem;
+}
+.market-detail-question-container h2 {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+.market-detail-answers-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.market-detail-answer-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+.market-detail-answer-option.selected {
+  background: #dbeafe;
+  border-color: #3b82f6;
+  color: #2563eb;
+}
+.market-detail-answer-radio {
+  font-size: 1.2rem;
+  color: #3b82f6;
+  width: 24px;
+  text-align: center;
+}
+.market-detail-answer-text {
+  flex: 1;
+}
+.market-detail-quiz-navigation {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.market-detail-nav-btn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.market-detail-nav-btn:disabled {
+  background: #cbd5e1;
+  color: #888;
+  cursor: not-allowed;
+}
+.market-detail-question-indicators {
+  display: flex;
+  gap: 0.5rem;
+}
+.market-detail-question-indicator {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e0e7ef;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+.market-detail-question-indicator.current {
+  background: #3b82f6;
+  color: #fff;
+  border-color: #3b82f6;
+}
+.market-detail-question-indicator.answered {
+  background: #bbf7d0;
+  color: #059669;
+  border-color: #10b981;
+}
+.market-detail-question-indicator.answered.current {
+  background: #059669;
+  color: #fff;
+  border-color: #059669;
+}
+.market-detail-success-message {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  background: #10b981;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(16,185,129,0.15);
+  animation: slideIn 0.3s ease;
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

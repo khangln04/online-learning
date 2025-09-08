@@ -1,0 +1,104 @@
+/* Khung chung */
+.header-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #2e3192 0%, #2e3192 100%);
+  padding: 10px 30px;
+  color: white;
+  position: relative;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Logo */
+.logo-component img {
+  height: 50px;
+  width: 55px;
+  cursor: pointer;
+}
+
+/* Navbar chính */
+.navbar-component {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+/* Link trong navbar */
+.navbar-component a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 8px;
+  transition: color 0.2s ease;
+}
+
+.navbar-component a:hover {
+  color: rgb(11, 11, 8);
+}
+
+/* Dropdown menu */
+.dropdown-component {
+  position: relative;
+}
+
+.dropdown-component .arrow {
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+/* Ẩn submenu mặc định */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  overflow: hidden;
+  z-index: 999;
+  padding: 8px 0;
+}
+
+.dropdown-component:hover .dropdown-content {
+  display: block;
+}
+
+/* Link bên trong submenu */
+.dropdown-content a {
+  color: black;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Auth buttons */
+.auth-buttons-component {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons-component button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.auth-buttons-component button:hover {
+  background-color: #e0e0e0;
+}

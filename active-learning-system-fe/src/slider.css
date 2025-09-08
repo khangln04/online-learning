@@ -1,0 +1,119 @@
+/* Wrapper: vùng bọc tổng thể */
+.wrapper {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Carousel trượt ngang */
+.carousel{
+  display:flex;
+  gap:24px;                   /* khoảng cách card */
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  padding:24px 48px;          /* padding trái-phải đồng bộ arrow */
+  box-sizing:border-box;
+}
+.carousel::-webkit-scrollbar{display:none}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Slide item */
+.slide-item {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.slide-item.course {
+  flex: 0 0 300px;
+  max-width: 300px;
+  height: 420px;
+  display: flex;
+  align-items: stretch;
+}
+/* Hình ảnh đầu card */
+/* .slide-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0;
+  flex-shrink: 0;
+} */
+
+/* Nội dung bên trong */
+.slide-content {
+  flex: 1;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Thông tin phía trên */
+.text-info h4 {
+  font-size: 1rem;
+  color: #9333ea;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.text-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Phần tác giả và giá nằm dưới cùng */
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Nút điều hướng trái/phải */
+.caret {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: #eab308;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.caret.left {
+ color: #000;         /* hoặc màu gốc bạn đang dùng */
+  opacity: 0.4;        /* mờ đi */
+  font-size: 28px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  left: 0px;
+}
+
+.caret.right {
+ color: #000;         /* hoặc màu gốc bạn đang dùng */
+  opacity: 0.4;        /* mờ đi */
+  font-size: 28px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  right: 0px;
+}
+
+.caret:hover {
+  background: #ca8a04;
+}

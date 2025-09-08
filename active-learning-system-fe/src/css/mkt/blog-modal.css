@@ -1,0 +1,205 @@
+/* Blog detail modal modern style */
+.blog-detail-modal {
+  width: 800px !important;
+  max-width: 99vw;
+  max-height: 80vh;
+  background: #f8fafc;
+  border-radius: 18px;
+  box-shadow: 0 6px 36px 0 rgba(30,41,59,0.22);
+  padding: 38px 56px 30px 56px;
+  margin: 0 auto;
+  animation: fadeInModal 0.25s;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@keyframes fadeInModal {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.blog-detail-modal h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+.blog-detail-meta {
+  margin-bottom: 18px;
+  color: #64748b;
+  font-size: 1.08rem;
+}
+.blog-detail-modal img {
+  width: 220px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 12px 0 rgba(25, 118, 210, 0.10);
+}
+.blog-detail-section {
+  margin-bottom: 18px;
+}
+.blog-detail-section b {
+  color: #1976d2;
+  font-weight: 600;
+}
+.blog-detail-content {
+  color: #222;
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px 16px;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  box-shadow: 0 1px 6px 0 rgba(30,41,59,0.06);
+  white-space: pre-line;
+}
+.blog-detail-summary {
+  color: #222;
+  background: #f1f5fa;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  margin-top: 4px;
+  box-shadow: 0 1px 4px 0 rgba(30,41,59,0.04);
+}
+#edit-title {
+  font-size: 1.08rem;
+  height: 3rem;
+  padding: 10px 14px;
+  border-radius: 7px;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  font-weight: 400;
+  background: #f8fafc;
+  color: #1e293b;
+  transition: border 0.2s;
+  box-shadow: none;
+}
+#edit-title:focus {
+  border: 1.5px solid #3b82f6;
+  background: #fff;
+}
+#edit-title::placeholder {
+  font-size: 1.08rem;
+  color: #64748b;
+  font-weight: 400;
+  opacity: 1;
+}
+#add-title::placeholder {
+  font-size: 1.08rem;
+  color: #64748b;
+  font-weight: 400;
+  opacity: 1;
+}
+/* Add title input styling */
+#add-title {
+  font-size: 1.08rem;
+  height: 3rem;
+  padding: 10px 14px;
+  border-radius: 7px;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  font-weight: 400;
+  background: #f8fafc;
+  color: #1e293b;
+  transition: border 0.2s;
+  box-shadow: none;
+}
+#add-title:focus {
+  border: 1.5px solid #3b82f6;
+  background: #fff;
+}
+#add-title::placeholder {
+  font-size: 1.08rem;
+  color: #64748b;
+  font-weight: 400;
+  opacity: 1;
+}
+.modal-content {
+  width: 540px !important;
+  max-width: 98vw;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 32px 0 rgba(30,41,59,0.18);
+  padding: 36px 32px 28px 32px;
+  margin: 0 auto;
+}
+.blog-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.blog-modal-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+.blog-modal-field label {
+  min-width: 110px;
+  font-weight: 500;
+  color: #1e293b;
+  font-size: 1.08rem;
+  margin-top: 6px;
+}
+.blog-modal-field input[type="text"] {
+  flex: 1;
+  font-size: 1.28rem;
+  padding: 16px 18px;
+  border: 1.5px solid #3b82f6;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #1e293b;
+  transition: border 0.2s;
+  font-weight: 500;
+}
+.blog-modal-field textarea {
+  flex: 1;
+  font-size: 1.08rem;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #f8fafc;
+  color: #1e293b;
+  transition: border 0.2s;
+  min-height: 70px;
+  resize: vertical;
+}
+.blog-modal-field textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+.blog-modal-field input[type="file"] {
+  font-size: 1rem;
+  background: #f8fafc;
+  border-radius: 7px;
+  border: 1px solid #cbd5e1;
+  padding: 7px 0;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 18px;
+}
+.modal-actions button {
+  padding: 8px 22px;
+  border-radius: 7px;
+  border: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: #3b82f6;
+  color: #fff;
+  transition: background 0.2s;
+}
+.modal-actions button[type="button"] {
+  background: #e5e7eb;
+  color: #1e293b;
+}
+.modal-actions button[type="button"]:hover {
+  background: #cbd5e1;
+}
+.modal-actions button[type="submit"]:hover {
+  background: #2563eb;
+}

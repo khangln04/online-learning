@@ -1,0 +1,119 @@
+.paid-history-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.paid-history-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.alert-box {
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.alert-box.error {
+  background-color: #ffe6e6;
+  color: #d8000c;
+}
+
+.alert-box.loading {
+  background-color: #e6f7ff;
+  color: #00529b;
+}
+
+.alert-box.info {
+  background-color: #fffbe5;
+  color: #9f6000;
+}
+
+.paid-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  background-color: #fefefe;
+  table-layout: fixed;
+}
+
+.paid-history-table th,
+.paid-history-table td {
+  padding: 14px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+/* Cột STT nhỏ lại */
+.paid-history-table th:nth-child(1),
+.paid-history-table td:nth-child(1) {
+  width: 6%;
+}
+
+/* Cột Trạng thái vừa vặn */
+.paid-history-table th:nth-child(5),
+.paid-history-table td:nth-child(5) {
+  width: 18%;
+}
+
+/* Nếu có thêm cột Thao tác */
+.paid-history-table th:nth-child(6),
+.paid-history-table td:nth-child(6) {
+  width: 16%;
+}
+
+.paid-history-table th {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Trạng thái thanh toán */
+.status-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-paid {
+  background-color: #28a745;
+}
+
+.status-unpaid {
+  background-color: #dc3545;
+}
+
+.status-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #28a745;
+}
+
+.status-text.unpaid {
+  color: #dc3545;
+}
+
+/* Fix lỗi chấm xanh thừa từ ::before */
+.paid-history-table td:nth-child(5)::before {
+  content: none !important;
+  display: none !important;
+}

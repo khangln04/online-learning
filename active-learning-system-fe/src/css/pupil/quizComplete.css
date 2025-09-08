@@ -1,0 +1,108 @@
+.quiz-complete-container {
+    padding: 32px 24px;
+    background: #f9fafb;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    max-width: 700px;
+    margin: 32px auto;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.quiz-question-block {
+    margin-bottom: 36px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: box-shadow 0.2s;
+}
+
+.quiz-question-block:hover {
+    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.08);
+}
+
+.quiz-question-title {
+    font-weight: 600;
+    margin-bottom: 14px;
+    font-size: 1.15rem;
+    color: #34495e;
+    letter-spacing: 0.2px;
+}
+
+.quiz-answers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quiz-answer {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: #f4f6fb;
+    color: #222;
+    font-size: 1rem;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    position: relative;
+}
+
+.quiz-answer.correct-selected {
+    background: #eafaf1;
+    color: #222;
+    border-color: #27ae60;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.08);
+}
+
+.quiz-answer.wrong-selected {
+    background: #fdecea;
+    color: #e74c3c;
+    border-color: #e74c3c;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.08);
+}
+
+.quiz-answer.correct-answer {
+    background: #eafaf1;
+    color: #222;
+    border-color: #27ae60;
+}
+
+.quiz-answer-user {
+    font-style: italic;
+    color: #2980b9;
+    margin-left: 12px;
+    font-size: 0.97rem;
+}
+
+.quiz-answer-correct {
+    font-style: italic;
+    color: #27ae60;
+    margin-left: 12px;
+    font-size: 0.97rem;
+}
+
+.quiz-answer-option {
+    flex: 1;
+    word-break: break-word;
+}
+
+@media (max-width: 600px) {
+    .quiz-complete-container {
+        padding: 12px 4px;
+        border-radius: 8px;
+        margin: 12px auto;
+    }
+    .quiz-question-block {
+        padding-bottom: 8px;
+        border-radius: 6px;
+    }
+    .quiz-answer {
+        padding: 8px 8px;
+        border-radius: 6px;
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,555 @@
+.account-list-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Header của danh sách */
+.account-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* Tiêu đề */
+.account-list-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Nút Thêm tài khoản */
+.add-account-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #10b981; /* Xanh ngọc */
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.add-account-btn:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+}
+
+.add-account-btn:active {
+  transform: translateY(0);
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #ffffff; /* Nền nhạt hài hòa */
+  border: 1px solid #e5e7eb; /* Viền mỏng xám nhạt */
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 1000px !important; /* Đảm bảo kích thước rộng */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-height: 90vh; /* Giới hạn chiều cao, cuộn nếu dài */
+  overflow-y: auto;
+}
+
+/* Tiêu đề modal */
+.modal-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937; /* Màu tối cho tiêu đề */
+  margin-bottom: 20px;
+}
+
+/* Thông báo lỗi */
+.error-message {
+  color: #dc3545; /* Đỏ nhạt cho lỗi, thay thế #ef4444 */
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding: 8px;
+  background-color: #f8d7da; /* Nền hồng nhạt cho lỗi */
+  border-radius: 4px;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151; /* Màu xám đậm cho label */
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db; /* Viền xám nhạt */
+  border-radius: 6px;
+  font-size: 15px;
+  color: #1f2937; /* Màu tối cho text input */
+  background-color: #ffffff; /* Nền trắng cho input */
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3b82f6; /* Xanh dương khi focus */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Modal actions */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.modal-actions .cancel-btn {
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f3f4f6; /* Nền xám nhạt */
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal-actions .cancel-btn:hover {
+  background-color: #e5e7eb; /* Xám nhạt khi hover */
+}
+
+.modal-actions .submit-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3b82f6; /* Xanh dương */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.modal-actions .submit-btn:hover {
+  background-color: #2563eb; /* Xanh đậm khi hover */
+  transform: translateY(-1px);
+}
+
+.modal-actions .submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Detail group */
+.detail-group {
+  margin-bottom: 16px;
+}
+
+.detail-group p {
+  font-size: 15px;
+  color: #1f2937; /* Màu tối cho text */
+  margin-bottom: 8px;
+}
+
+.detail-group a {
+  color: #3b82f6; /* Xanh dương cho link */
+  text-decoration: none;
+}
+
+.detail-group a:hover {
+  text-decoration: underline;
+}
+
+/* Bảng danh sách tài khoản */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Đầu bảng */
+th {
+  background-color: #f7f9fc; /* Nền nhạt cho header bảng */
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Ô trong bảng */
+td {
+  padding: 16px;
+  font-size: 15px;
+  color: #4b5563; /* Màu xám cho text */
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+/* Hàng bảng khi hover */
+tr:hover {
+  background-color: #f9fafb; /* Nền nhạt khi hover */
+}
+
+/* Cột trạng thái */
+td:nth-child(5) {
+  font-weight: 500;
+}
+
+/* Badge cho trạng thái */
+td:nth-child(5)::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+td:nth-child(5):not(.inactive)::before {
+  background-color: #22c55e; /* Xanh lá cho Hoạt động */
+}
+
+td:nth-child(5).inactive::before {
+  background-color: #dc3545; /* Đỏ nhạt cho Bị khóa */
+}
+
+/* Nút hành động */
+td button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3b82f6; /* Xanh dương */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+td button:hover {
+  background-color: #2563eb; /* Xanh đậm khi hover */
+  transform: translateY(-1px);
+}
+
+td button:active {
+  transform: translateY(0);
+}
+
+/* Phân trang */
+.pagination {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Nút phân trang */
+.pagination button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f3f4f6; /* Nền xám nhạt */
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #e5e7eb; /* Xám nhạt khi hover */
+}
+
+.pagination button:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Trang hiện tại */
+.pagination span {
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: #3b82f6; /* Xanh dương */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .account-list-container {
+    margin: 20px;
+    padding: 16px;
+  }
+
+  .account-list-header h2 {
+    font-size: 24px;
+  }
+
+  .add-account-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  td button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .pagination button, .pagination span {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .modal-content {
+    max-width: 95% !important; /* Tối đa hóa trên màn hình nhỏ */
+    padding: 16px;
+  }
+
+  .modal-content h3 {
+    font-size: 20px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .modal-actions .cancel-btn,
+  .modal-actions .submit-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .detail-group p {
+    font-size: 13px;
+  }
+}
+
+/* Bộ lọc và tìm kiếm */
+.search-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px; /* Khoảng cách dưới search */
+}
+
+.search-box input {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-right: 8px; /* Khoảng cách giữa input và button */
+}
+
+.search-box button {
+  padding: 8px 16px;
+  margin-left: 0; /* Đảm bảo nút dính sát input */
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-box select {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.pagination button {
+  padding: 5px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.pagination button.active,
+.pagination button:hover:not(:disabled) {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.pagination button:disabled {
+  background: #f0f0f0;
+  color: #aaa;
+  cursor: default;
+}
+
+.error-message {
+  background-color: #f8d7da; /* Nền hồng nhạt */
+  color: #dc3545; /* Màu đỏ nhạt */
+  font-size: 14px;
+}
+
+.navbar11 {
+  padding-right: 800px;
+}
+
+.logo {
+  padding-right: 100px;
+}
+
+/* ====== burger button ====== */
+.drawer {
+  position: fixed;
+  top: 50px; /* cách mép trên 50 px */
+  left: 0;
+  width: 240px; /* rộng 240 px */
+  height: 816px; /* cao 816 px */
+  background: #fff;
+  box-shadow: 2px 0 6px rgba(0,0,0,.12);
+  transform: translateX(-100%); /* ẩn ra ngoài */
+  transition: transform .25s ease;
+  z-index: 998;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* cuộn nếu nội dung vượt quá 816 px */
+}
+
+/* Khi drawerOpen = true → thêm class "open" */
+.drawer.open {
+  transform: translateX(0); /* trượt vào */
+}
+
+/* header drawer */
+.drawer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.drawer-logo {
+  width: 120px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* menu item */
+.drawer-menu {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.drawer-menu a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 24px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.drawer-menu a:hover {
+  background: #f5f5f5;
+}
+
+.drawer-menu img {
+  width: 22px;
+}
+
+.burger-btn {
+  background: #6a0dad;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  margin-right: 8px;
+}
+
+.burger-btn img {
+  width: 20px; /* nhỏ lại */
+  height: 20px;
+  object-fit: contain;
+}
+
+.avatar-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* Giữ tỷ lệ và cắt ảnh nếu cần */
+  border-radius: 50%; /* Nếu muốn ảnh tròn, có thể bỏ nếu không cần */
+  display: block;
+}
+
+.avatar-section {
+  margin-top: 10px;
+}
+
+.account-list-container {
+  background: #f0f4f8; /* Màu xanh xám nhạt */
+  padding: 24px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+  transition: background 0.3s ease;
+}
+
+body {
+  background-color: #436690; /* Màu nền tổng thể */
+}

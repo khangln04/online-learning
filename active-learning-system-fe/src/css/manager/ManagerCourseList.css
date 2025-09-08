@@ -1,0 +1,917 @@
+/* Ngăn chặn ảnh hưởng của accountlist.css lên bảng khóa học */
+.courses-table-courselist-manager td:nth-child(5)::before {
+  display: none !important;
+  content: none !important;
+}
+/* EduPlatform Dashboard Layout Styles */
+.dashboard {
+  border: none;
+  cursor: pointer;
+}
+.burger-btn img {
+  width: 24px;
+  height: 24px;
+}
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #34495e;
+  transition: left 0.3s ease;
+}
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #fafbfc;
+  color: #222;
+}
+
+.dashboard-courselist-manager {
+  display: flex;
+  min-height: 100vh;
+  background: #fafbfc;
+}
+
+ .sidebar-courselist-manager {
+  width: 260px;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 24px 0;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: 100vh;
+  z-index: 100;
+  /* giữ lại các style cũ, thêm các style này để sticky */
+}
+.logo-courselist-manager {
+  padding: 32px 0 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.logo-content-courselist-manager {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 32px;
+}
+.logo-icon-courselist-manager {
+  font-size: 32px;
+  color: #3b82f6;
+}
+.logo-text-courselist-manager h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: #3b82f6;
+}
+.logo-text-courselist-manager p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+.nav-menu-courselist-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 32px 0 0 0;
+  padding-left: 32px;
+}
+.nav-item-courselist-manager {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 16px;
+  padding: 10px 0 10px 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.nav-item-courselist-manager.active,
+.nav-item-courselist-manager:hover {
+  background: #f0f4ff;
+  color: #2563eb;
+}
+.user-section-courselist-manager {
+  margin-top: auto;
+  padding-left: 32px;
+}
+.user-info-courselist-manager {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.user-avatar-courselist-manager {
+  width: 36px;
+  height: 36px;
+  background: #e0e7ff;
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-details-courselist-manager h3 {
+  font-size: 16px;
+  margin: 0;
+}
+.user-details-courselist-manager p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+.logout-btn-courselist-manager {
+  background: #f3f4f6;
+  color: #222;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.logout-btn-courselist-manager:hover {
+  background: #e0e7ff;
+  color: #2563eb;
+}
+.main-content-courselist-manager {
+  flex: 1;
+  padding: 0 40px;
+  background: #fafbfc;
+}
+.header-courselist-manager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0 16px 0;
+}
+.header-courselist-manager h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+.header-right-courselist-manager {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.role-switcher-courselist-manager {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+.role-badge-courselist-manager {
+  background: #e0e7ff;
+  color: #2563eb;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+.content-area-courselist-manager {
+  margin-top: 8px;
+}
+.stats-grid-courselist-manager {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.stat-card-courselist-manager {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.stat-header-courselist-manager {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.stat-icon-courselist-manager {
+  font-size: 20px;
+}
+.stat-title-courselist-manager {
+  color: #2563eb;
+}
+.stat-value-courselist-manager {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+.stat-subtitle-courselist-manager {
+  font-size: 13px;
+  color: #64748b;
+}
+.courses-section-courselist-manager {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 24px;
+}
+.section-header-courselist-manager {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+/* Đảm bảo search box và filter nằm cùng hàng, căn chỉnh đẹp */
+.section-header-courselist-manager form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.section-header-courselist-manager .filter-dropdown-courselist-manager {
+  margin-left: 0;
+}
+
+@media (max-width: 900px) {
+  .section-header-courselist-manager {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .section-header-courselist-manager form,
+  .section-header-courselist-manager .filter-dropdown-courselist-manager {
+    width: 100%;
+    margin: 0;
+  }
+}
+.section-header-courselist-manager h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+.filter-dropdown-courselist-manager {
+  background: #f3f4f6;
+  color: #222;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 180px;
+  min-width: 120px;
+  width: auto;
+  box-sizing: border-box;
+}
+.add-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.add-btn:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+.courses-table-courselist-manager {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 18px;
+}
+.table-header-courselist-manager th {
+  background: #f3f4f6;
+  color: #222;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.table-row-courselist-manager {
+  background: #fff;
+  transition: background 0.2s;
+}
+.table-row-courselist-manager:hover {
+  background: #f0f4ff;
+}
+.table-cell-courselist-manager {
+  padding: 10px 8px;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: middle;
+}
+.course-image-courselist-manager {
+  width: 44px;
+  height: 44px;
+  background: #e0e7ff;
+  color: #2563eb;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.course-details-courselist-manager h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+}
+.course-details-courselist-manager p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+.instructor-info-courselist-manager {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.instructor-avatar-courselist-manager {
+  width: 32px;
+  height: 32px;
+  background: #f3f4f6;
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.instructor-name-courselist-manager {
+  font-size: 15px;
+  color: #222;
+}
+.status-badge-courselist-manager {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+.status-published-courselist-manager {
+  background: #e0f7fa;
+  color: #059669;
+}
+.status-private-courselist-manager {
+  background: #f3f4f6;
+  color: #64748b;
+}
+.date-cell-courselist-manager {
+  font-size: 14px;
+  color: #64748b;
+}
+.actions-cell-courselist-manager {
+  display: flex;
+  gap: 8px;
+}
+.action-btn-courselist-manager {
+  background: #f3f4f6;
+  border: none;
+  color: #2563eb;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.action-btn-courselist-manager:hover {
+  background: #e0e7ff;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+.pagination button {
+  background: #f3f4f6;
+  border: none;
+  color: #2563eb;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.pagination button:disabled {
+  background: #e5e7eb;
+  color: #64748b;
+  cursor: not-allowed;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 32px 28px;
+  min-width: 340px;
+  max-width: 420px;
+}
+.modal-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.form-group {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.form-group label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+  background: #fafbfc;
+  color: #222;
+}
+.form-group textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+.cancel-btn {
+  background: #f3f4f6;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cancel-btn:hover {
+  background: #e0e7ff;
+  color: #2563eb;
+}
+.submit-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.submit-btn:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+.error-message-course-list-manager {
+  color: #ef4444;
+  background: #fee2e2;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.success-message-course-list-manager {
+  color: #059669;
+  background: #e0f7fa;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.loading-message {
+  color: #2563eb;
+  background: #e0e7ff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.activate-windows-courselist-manager {
+  position: fixed;
+  bottom: 12px;
+  right: 18px;
+  color: #64748b;
+  font-size: 13px;
+  opacity: 0.7;
+}
+.drawer.open {
+  left: 0;
+}
+.drawer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.drawer-logo {
+  width: 40px;
+}
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.drawer-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.drawer-menu a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px 0;
+}
+.drawer-menu img {
+  width: 20px;
+  margin-right: 10px;
+}
+.navbar11 {
+  display: flex;
+  gap: 15px;
+}
+.navbar11 a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.auth-buttons button {
+  padding: 5px 10px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.auth-buttons button:hover {
+  background: #2980b9;
+}
+.auth-buttons span {
+  color: #fff;
+}
+.course-list-container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.course-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.add-btn {
+  background-color: #4CAF50; /* Màu xanh lá cây tươi sáng */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.add-btn:hover {
+  background-color: #45a049; /* Màu tối hơn khi hover */
+  transform: translateY(-2px); /* Hiệu ứng nâng lên nhẹ */
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3); /* Bóng mờ khi hover */
+}
+.add-btn:active {
+  transform: translateY(0); /* Trở về vị trí ban đầu khi nhấn */
+  box-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+}
+.add-btn::before {
+  content: "➕"; /* Biểu tượng cộng */
+  font-size: 18px;
+}
+@media (max-width: 600px) {
+  .add-btn {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+.error-message {
+  color: #e74c3c; /* Đỏ nhạt */
+  background: rgba(231, 76, 60, 0.5); /* Nền đỏ nhạt, trong suốt 50% */
+  border: 0.5px solid #e74c3c; /* Viền đỏ nhạt, mỏng hơn */
+  border-radius: 4px;
+  font-size: 18px; /* Kích thước chữ */
+  padding: 10px 20px;
+  position: fixed; /* Đặt ở giữa màn hình */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Căn giữa */
+  z-index: 1000; /* Đảm bảo hiển thị trên các phần tử khác */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.success-message {
+  color: #000; /* Chữ đen */
+  background: rgba(46, 204, 113, 0.5); /* Nền xanh nhạt, trong suốt 50% */
+  border: 0.5px solid #2ecc71; /* Viền xanh lá, mỏng hơn */
+  border-radius: 4px;
+  font-size: 18px; /* Kích thước chữ */
+  padding: 10px 20px;
+  position: fixed; /* Đặt ở giữa màn hình */
+ 
+  left: 50%;
+  transform: translate(-50%, -50%); /* Căn giữa */
+  z-index: 1000; /* Đảm bảo hiển thị trên các phần tử khác */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 200px;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #34495e; /* Xám đậm */
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bdc3c7; /* Xám nhạt */
+  border-radius: 4px;
+  color: #2c3e50; /* Xám đậm */
+  background-color: #ffffff;
+}
+.form-group textarea {
+  height: 100px;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.cancel-btn, .submit-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.cancel-btn {
+  background: #ecf0f1; /* Xám nhạt */
+  color: #2c3e50;
+}
+.submit-btn {
+  background: #3498db; /* Xanh dương */
+  color: #fff;
+}
+.submit-btn:hover {
+  background: #2980b9; /* Xanh đậm hơn */
+}
+.search-box {
+  margin-bottom: 16px;
+}
+.search-box input {
+  padding: 8px;
+  border: 1px solid #bdc3c7; /* Xám nhạt */
+  border-radius: 4px;
+  color: #2c3e50;
+}
+.search-box button {
+  padding: 8px 16px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.filter-box {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.filter-box select {
+  padding: 8px;
+  border: 1px solid #bdc3c7; /* Xám nhạt */
+  border-radius: 4px;
+  color: #2c3e50;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #ffffff; /* Nền trắng cho bảng */
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  border: 1px solid #ecf0f1; /* Xám rất nhạt */
+  padding: 16px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 15px;
+  color: #2c3e50; /* Xám đậm cho chữ */
+}
+th {
+  background: #f8f9fa; /* Xám nhạt cho tiêu đề */
+  font-weight: 600;
+}
+.status-active {
+  color: #2ecc71; /* Xanh lá cho trạng thái hoạt động */
+}
+.status-inactive {
+  color: #e74c3c; /* Đỏ nhạt cho trạng thái không hoạt động */
+}
+.course-name-link {
+  color: #3498db; /* Xanh dương cho tên khóa học */
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  padding: 2px 0;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+.course-name-link:hover {
+  color: #2980b9; /* Xanh đậm hơn khi hover */
+  text-decoration: none;
+}
+.detail-section {
+  margin-bottom: 20px;
+}
+.detail-section p {
+  margin: 5px 0;
+  color: #34495e;
+}
+.detail-section img {
+  margin-top: 10px;
+  max-width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.detail-btn {
+  background-color: #9b59b6; /* Màu tím */
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(155, 89, 182, 0.2);
+}
+.detail-btn:hover {
+  background-color: #8e44ad; /* Màu tím đậm hơn */
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(155, 89, 182, 0.3);
+}
+.detail-btn:active {
+  transform: scale(1.0);
+  box-shadow: 0 1px 2px rgba(155, 89, 182, 0.2);
+}
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 14px;
+}
+.update-btn {
+  background-color: #f1c40f; /* Vàng */
+  color: #fff;
+}
+.update-btn:hover {
+  background-color: #d4a017; /* Vàng đậm hơn */
+  transform: scale(1.05);
+}
+.delete-btn {
+  background-color: #e74c3c; /* Đỏ */
+  color: #fff;
+}
+.delete-btn:hover {
+  background-color: #c0392b; /* Đỏ đậm hơn */
+  transform: scale(1.05);
+}
+.course-name-btn {
+  background: none;
+  border: none;
+  color: black;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 2px 4px;
+  margin: 0;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  width: auto;
+  text-decoration: none; 
+}
+.avatar-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* Giúp ảnh không bị méo */
+  display: block;
+}
+.course-list-container {
+  background: #eef4f9;          /* xanh hơi xám rất nhạt */
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.view-btn {
+  background-color: #9b59b6;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-left: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.view-btn:hover {
+  background-color: #8e44ad;
+}
+
+
+/* Không cần hiệu ứng hover màu khác hoặc scale */
+
+
+/* Viết hoa chữ cái đầu trong JavaScript hoặc React, chứ CSS không làm được trực tiếp */
+
+
+th:nth-child(1), td:nth-child(1) { width: 20%; } /* Tên khóa học */
+th:nth-child(2), td:nth-child(2) { width: 15%; } /* Tác giả */
+th:nth-child(3), td:nth-child(3) { width: 15%; } /* Danh mục */
+th:nth-child(4), td:nth-child(4) { width: 10%; } /* Trạng thái */
+th:nth-child(5), td:nth-child(5) { width: 10%; } /* Ngày tạo */
+th:nth-child(6), td:nth-child(6) { width: 10%; } /* Ngày cập nhật */
+th:nth-child(7), td:nth-child(7) { width: 13%; }

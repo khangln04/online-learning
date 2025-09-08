@@ -1,0 +1,129 @@
+.reset-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+.reset-left {
+  flex: 1;
+  background: linear-gradient(to bottom right, #5a2bc9, #85278d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset-logo {
+  width: 180px;
+  height: 180px;
+}
+
+.reset-right {
+  flex: 1.5;
+  font-size: 20px;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reset-title {
+  font-size: 32px;
+  margin-left: 30%;
+  margin-bottom: 12px;
+}
+
+.highlight {
+  color: #f6aa00;
+  border-left: 4px solid #f6aa00;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.reset-subtext {
+  margin-bottom: 30px;
+  margin-left: 30%;
+  font-size: 20px;
+}
+
+.create-link {
+  color: #1d4ed8;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.reset-input {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  margin-left: 30%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  width: 48%;
+  max-width: 520px;
+  outline: none;
+}
+
+.reset-button {
+  background-color: #f6aa00;
+  border: none;
+  color: #000;
+  padding: 12px 20px;
+  margin-left: 30%;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 24px;
+  width: 50%;
+}
+
+.reset-button:hover {
+  opacity: 0.9;
+}
+
+/* ✅ Căn giữa và đồng bộ thông báo */
+.message-wrapper {
+  margin: 0 auto 20px auto;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 50%;
+  max-width: 520px;
+  text-align: center;
+}
+
+
+.error-message-forget2 {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+  padding: 10px;
+  margin-left: 30%;
+  margin-bottom: 10px;
+  width: 48%;
+  max-width: 520px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.success-message {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+  padding: 10px;
+}
+.success-text {
+  color: #065f46;
+  background-color: #d1fae5;
+  border: 1px solid #6ee7b7;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-left: 30%;
+  margin-bottom: 20px;
+  width: 50%;
+  max-width: 520px;
+  text-align: center;
+}

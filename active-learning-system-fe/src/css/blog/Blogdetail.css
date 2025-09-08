@@ -1,0 +1,210 @@
+.blog-layout {
+  display: grid;
+  grid-template-columns: 3fr 1.2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Vùng chính hiển thị nội dung blog */
+.blog-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.blog-title {
+  font-size: 2rem;
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.blog-thumbnail {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.blog-summary {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.blog-body {
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Vùng sidebar */
+.blog-sidebar {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.blog-sidebar h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #1976d2;
+}
+
+/* Danh sách bài viết mới nhất */
+.recent-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-post-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.recent-post-item img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.recent-posts a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.recent-posts a:hover {
+  text-decoration: underline;
+  color: #1976d2;
+}
+
+/* Phần bình luận */
+.blog-comments {
+  margin-top: 50px;
+}
+
+.comment-list {
+  margin-bottom: 20px;
+}
+
+.comment-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.comment-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-content strong {
+  font-size: 1rem;
+  color: #222;
+}
+
+.comment-content p {
+  margin: 4px 0;
+  font-size: 1.2rem; 
+}
+
+.comment-content small {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* Form gửi bình luận */
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.comment-form button {
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.comment-form button:disabled {
+  background-color: #90caf9;
+  cursor: not-allowed;
+}
+
+/* Hiển thị lỗi */
+.error-message {
+  color: #c62828;
+  background-color: #ffebee;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-sidebar {
+    margin-top: 30px;
+  }
+
+  .recent-post-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .recent-post-item img {
+    width: 50px;
+    height: 35px;
+  }
+
+  .comment-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .comment-avatar img {
+    width: 45px;
+    height: 45px;
+  }
+}
